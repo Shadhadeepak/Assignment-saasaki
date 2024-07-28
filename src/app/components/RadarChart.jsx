@@ -1,6 +1,6 @@
 'use client'
 
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Legend } from 'recharts';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Legend, Tooltip } from 'recharts';
 
 
 function RadarChartComponent({data}) {
@@ -10,6 +10,7 @@ function RadarChartComponent({data}) {
     <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
     <PolarGrid />
     <Legend />
+    <Tooltip />
     <PolarAngleAxis dataKey="name" />
     <PolarRadiusAxis />
     <Radar name="Reveune" dataKey="revenue" stroke="#2563eb" fill="#3b82f6" fillOpacity={0.6} />
