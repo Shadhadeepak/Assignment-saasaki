@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { RadialBarChart, RadialBar, Legend, ResponsiveContainer } from 'recharts';
+import { RadialBarChart, RadialBar, Legend, ResponsiveContainer, Tooltip } from 'recharts';
 
 const style = {
     top: '50%',
@@ -13,7 +13,7 @@ const style = {
 function RadialChartComponent({data}) {
   return (
     <ResponsiveContainer width="100%" height="100%">
-        
+        <Tooltip />
         <RadialBarChart cx="50%" cy="50%" innerRadius="10%" outerRadius="80%" barSize={10} data={data}>
         <RadialBar
             minAngle={15}
